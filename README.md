@@ -6,14 +6,14 @@ Module to improve your user experience with PowerShell.
 
 Module to improve your user experience with PowerShell, by customizing the window and overwriting/adding some essential functions. 
 
-## Functions
+## Module
 
 | Function | Description |
 | :--- | :--- |
 | Start screen | Informations about the user and the system (overwrites `Clear-Console`) |
 | Short paths | Drive/network share and current folder (overwrites `prompt`) |
 
-## Install
+#### How to install the module?
 
 1. Download the [latest Release](https://github.com/BornToBeRoot/PowerShell_ModernConsole/releases/latest) 
 2. Copy the folder [Module\ModernConsole](Module/ModernConsole) to `C:\Users\%username%\Documents\WindowsPowerShell\Modules\`
