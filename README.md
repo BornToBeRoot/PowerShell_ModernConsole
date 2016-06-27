@@ -9,7 +9,7 @@ Module to improve your user experience with PowerShell, by customizing the windo
 | Function | Description |
 | :--- | :--- |
 | Start screen | Informations about the user and the system (overwrites `Clear-Console`) |
-| Short paths | Drive/netowrk share and current folder (overwrites `prompt`) |
+| Short paths | Drive/network share and current folder (overwrites `prompt`) |
 
 After the installation, the console looks as follows:
 
