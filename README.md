@@ -6,6 +6,8 @@ Module to improve your user experience with PowerShell.
 
 Module to improve your user experience with PowerShell, by customizing the window and overwriting/adding some essential functions. 
 
+## Functions
+
 | Function | Description |
 | :--- | :--- |
 | Start screen | Informations about the user and the system (overwrites `Clear-Console`) |
