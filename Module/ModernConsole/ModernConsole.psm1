@@ -1,3 +1,11 @@
+###############################################################################################################
+# Language     :  PowerShell 4.0
+# Filename     :  ModernConsole.psm1
+# Autor        :  BornToBeRoot (https://github.com/BornToBeRoot)
+# Description  :  Module to improve the user experience of your PowerShell.
+# Repository   :  https://github.com/BornToBeRoot/PowerShell_ModernConsole
+###############################################################################################################
+
 # Check if console was started as admin
 if(([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator"))
 {
