@@ -30,12 +30,12 @@ $Shell = $Host.UI.RawUI
 $Shell.WindowTitle = $AdminTitle + "Windows PowerShell $($PSVersionTable.PSVersion.Major).$($PSVersionTable.PSVersion.Minor)"
 
 $Size = $Shell.WindowSize
-$Size.width=120
-$Size.height=35
+$Size.width=108
+$Size.height=30
 $Shell.WindowSize = $Size
 
 $Size = $Shell.BufferSize
-$Size.width=120
+$Size.width=108
 $Size.height=5000
 $Shell.BufferSize = $Size
 
@@ -47,23 +47,23 @@ $Shell.ForegroundColor = "Gray"
 function Write-StartScreen {
 
 	$EmptyConsoleText = @"
-         
-                                                   ____                        ____  _          _ _     
-        SS                                        |  _ \ _____      _____ _ __/ ___|| |__   ___| | |    
-        SSSSS                                     | |_) / _ \ \ /\ / / _ \ '__\___ \| '_ \ / _ \ | |    
-        SSSSSSSS                                  |  __/ (_) \ V  V /  __/ |   ___) | | | |  __/ | |    
-        SSSSSSSSSSS                               |_|   \___/ \_/\_/ \___|_|  |____/|_| |_|\___|_|_|    
-            SSSSSSSSSSS                                                                               
-              SSSSSSSSSSS                 +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
-                 SSSSSSSSSSS              |
-                  SSSSSSSSSS              |   Domain\Username  :  $env:USERDOMAIN\$env:USERNAME     
-                 SSSSSSSSSSS              |   Hostname         :  $([System.Net.Dns]::GetHostEntry([string]$env:computername).HostName)
-              SSSSSSSSSSS                 |   IPv4-Address     :  $ModernConsole_IPv4Address
-           SSSSSSSSSSS                    |   PSVersion        :  $($PSVersionTable.PSVersion.Major).$($PSVersionTable.PSVersion.Minor).$($PSVersionTable.PSVersion.Build).$($PSVersionTable.PSVersion.Revision)
-        SSSSSSSSSSS                       |   Date & Time      :  $(Get-Date -Format F) 
-        SSSSSSSS                          |                   
-        SSSSS      SSSSSSSSSSSSSSS        +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
-        SS      SSSSSSSSSSSSSSS                                             [https://GitHub.com/BornToBeRoot] 
+
+                                             ____                        ____  _          _ _     
+     SS                                     |  _ \ _____      _____ _ __/ ___|| |__   ___| | |    
+     SSSSS                                  | |_) / _ \ \ /\ / / _ \ '__\___ \| '_ \ / _ \ | |    
+     SSSSSSSS                               |  __/ (_) \ V  V /  __/ |   ___) | | | |  __/ | |    
+     SSSSSSSSSSS                            |_|   \___/ \_/\_/ \___|_|  |____/|_| |_|\___|_|_|    
+         SSSSSSSSSSS                                                                             
+           SSSSSSSSSSS              +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
+              SSSSSSSSSSS           |
+               SSSSSSSSSS           |   Domain\Username  :  $env:USERDOMAIN\$env:USERNAME     
+              SSSSSSSSSSS           |   Hostname         :  $([System.Net.Dns]::GetHostEntry([string]$env:computername).HostName)
+           SSSSSSSSSSS              |   IPv4-Address     :  $ModernConsole_IPv4Address
+        SSSSSSSSSSS                 |   PSVersion        :  $($PSVersionTable.PSVersion.Major).$($PSVersionTable.PSVersion.Minor).$($PSVersionTable.PSVersion.Build).$($PSVersionTable.PSVersion.Revision)
+     SSSSSSSSSSS                    |   Date & Time      :  $(Get-Date -Format F) 
+     SSSSSSSS                       |                   
+     SSSSS      SSSSSSSSSSSSSSS     +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
+     SS      SSSSSSSSSSSSSSS                                          [https://GitHub.com/BornToBeRoot] 
                                                                                 
 
 "@
@@ -82,7 +82,6 @@ function Clear-Host {
 	$origin = New-Object System.Management.Automation.Host.Coordinates
 	$Host.UI.RawUI.CursorPosition = $origin
 	$Host.UI.RawUI.SetBufferContents($rect, $space)
-
 	Write-StartScreen
 }
 
