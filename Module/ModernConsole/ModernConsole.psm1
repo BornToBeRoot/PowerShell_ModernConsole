@@ -2,9 +2,12 @@
 # Language     :  PowerShell 4.0
 # Filename     :  ModernConsole.psm1
 # Autor        :  BornToBeRoot (https://github.com/BornToBeRoot)
-# Description  :  Module to improve the user experience of your PowerShell.
+# Description  :  Module to improve the user experience of your PowerShell
 # Repository   :  https://github.com/BornToBeRoot/PowerShell_ModernConsole
 ###############################################################################################################
+
+# Include functions which are outsourced in .ps1-files
+Get-ChildItem -Path "$PSScriptRoot\Functions" -Recurse | Where-Object {$_.Name.EndsWith(".ps1")} | ForEach-Object {. $_.FullName}
 
 # Check if console was started as admin
 if(([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator"))
@@ -22,6 +25,16 @@ foreach($ip in $ipaddress.AddressList)
 		$ModernConsole_IPv4Address = $ip.IPAddressToString
 		break
 	}
+}
+
+# PSVersion (e.g. 5.0.10586.494 or 4.0)
+if($PSVersionTable.PSVersion.Major -gt 4)
+{
+    $ModernConsole_PSVersion = "$($PSVersionTable.PSVersion.Major).$($PSVersionTable.PSVersion.Minor).$($PSVersionTable.PSVersion.Build).$($PSVersionTable.PSVersion.Revision)"
+}
+else 
+{
+    $ModernConsole_PSVersion = "$($PSVersionTable.PSVersion.Major).$($PSVersionTable.PSVersion.Minor)"
 }
 
 
@@ -42,7 +55,6 @@ $Shell.BufferSize = $Size
 $Shell.BackgroundColor = "Black"
 $Shell.ForegroundColor = "Gray"
 
-
 # Startscreen / Clear-Host Text
 function Write-StartScreen {
 
@@ -59,7 +71,7 @@ function Write-StartScreen {
                SSSSSSSSSS           |   Domain\Username  :  $env:USERDOMAIN\$env:USERNAME     
               SSSSSSSSSSS           |   Hostname         :  $([System.Net.Dns]::GetHostEntry([string]$env:computername).HostName)
            SSSSSSSSSSS              |   IPv4-Address     :  $ModernConsole_IPv4Address
-        SSSSSSSSSSS                 |   PSVersion        :  $($PSVersionTable.PSVersion.Major).$($PSVersionTable.PSVersion.Minor).$($PSVersionTable.PSVersion.Build).$($PSVersionTable.PSVersion.Revision)
+        SSSSSSSSSSS                 |   PSVersion        :  $ModernConsole_PSVersion
      SSSSSSSSSSS                    |   Date & Time      :  $(Get-Date -Format F) 
      SSSSSSSS                       |                   
      SSSSS      SSSSSSSSSSSSSSS     +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+

@@ -17,10 +17,16 @@ Module to improve your user experience with PowerShell, by customizing the windo
 3. Open up a PowerShell as an admin and set the execution policy: `Set-ExecutionPolicy RemoteSigned`
 4. Import the Module with the command `Import-Module ModernConsole` (Maybe add this command to your PowerShell profile)
 
+#### Available features
+
+| Feature | Description |
+| :--- | :--- |
+| Start screen | Informations about the user and the system (overwrites `Clear-Console`) |
+| Short path | Drive/network share and current folder (overwrites `prompt`) |
+
 #### Available functions
 
 | Function | Description |
 | :--- | :--- |
-| Start screen | Informations about the user and the system (overwrites `Clear-Console`) |
-| Short paths | Drive/network share and current folder (overwrites `prompt`) |
-
+| [Restart-PowerShell](Module/ModernConsole/Restart-PowerShell.ps1) | Restart the PowerShell-Console, optional with administrative privileges |
+| [Start-PowerShell](Module/ModernConsole/Start-PowerShell.ps1) |  Start a new PowerShell-Console, optional with administrative privileges or as another user | 
