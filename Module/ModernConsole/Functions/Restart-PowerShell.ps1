@@ -41,6 +41,7 @@ function Restart-PowerShell
             }
         }
         catch{
+            Write-Host "$($_.Exception.Message)" -ForegroundColor Red
         }
     }
 
