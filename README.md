@@ -4,9 +4,12 @@ Module to improve your user experience with PowerShell.
 
 ## Description
 
-Module to improve your user experience with PowerShell, by customizing the window and overwriting/adding some essential functions. 
+Module to improve your user experience with PowerShell, by customizing the window and overwriting/adding some essential functions.
 
 ![Screenshot](/Documentation/Images/ModernConsole.png?raw=true "ModernConsole")
+
+Set the font as on the screenshot
+![Screenshot](/Documentation/Images/PowerShell_Properties_Font.png?raw=true "PowerShell_Properties_Font")
 
 ## Module
 
@@ -28,5 +31,5 @@ Module to improve your user experience with PowerShell, by customizing the windo
 
 | Function | Description |
 | :--- | :--- |
-| [Restart-PowerShell](Module/ModernConsole/Restart-PowerShell.ps1) | Restart the PowerShell-Console, optional with administrative privileges |
-| [Start-PowerShell](Module/ModernConsole/Start-PowerShell.ps1) |  Start a new PowerShell-Console, optional with administrative privileges or as another user | 
+| [Restart-PowerShell](Module/ModernConsole/Functions/Restart-PowerShell.ps1) | Restart the PowerShell-Console, optional with administrative privileges |
+| [Start-PowerShell](Module/ModernConsole/Functions/Start-PowerShell.ps1) |  Start a new PowerShell-Console, optional with administrative privileges or as another user | 
