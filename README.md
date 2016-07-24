@@ -8,7 +8,8 @@ Module to improve your user experience with PowerShell, by customizing the windo
 
 ![Screenshot](/Documentation/Images/ModernConsole.png?raw=true "ModernConsole")
 
-Set the font as on the screenshot
+Set the font and size as shown on the screenshot:
+
 ![Screenshot](/Documentation/Images/PowerShell_Properties_Font.png?raw=true "PowerShell_Properties_Font")
 
 ## Module
