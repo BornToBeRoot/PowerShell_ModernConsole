@@ -2,9 +2,29 @@
 # Language     :  PowerShell 4.0
 # Filename     :  Start-PowerShell.ps1
 # Autor        :  BornToBeRoot (https://github.com/BornToBeRoot)
-# Description  :  Start a new PowerShell-Console, optional with administrative privileges or as another user
-# Repository   :  https://github.com/BornToBeRoot/PowerShell
+# Description  :  Start a new PowerShell-Console window
+# Repository   :  https://github.com/BornToBeRoot/PowerShell_ModernConsole
 ###############################################################################################################
+
+<#
+    .SYNOPSIS
+    Start a new PowerShell-Console window
+    
+    .DESCRIPTION
+    Start a new PowerShell-Console window, optional with administrative privileges or as another user
+
+    .EXAMPLE
+    Start-PowerShell
+
+    .EXAMPLE
+    Start-PowerShell -AsAdmin
+
+    .EXAMPLE
+    Start-PowerShell -Credential (Get-Credential $null)        
+    
+    .LINK
+    https://github.com/BornToBeRoot/PowerShell_ModernConsole
+#>
 
 function Start-PowerShell
 {

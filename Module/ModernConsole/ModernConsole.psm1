@@ -144,5 +144,5 @@ function prompt {
 	return " "
 }
 
-# Clear console and shot startscreen
+# Clear Console and show start screen
 Clear-Host

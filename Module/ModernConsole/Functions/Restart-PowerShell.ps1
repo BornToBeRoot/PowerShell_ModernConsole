@@ -2,9 +2,26 @@
 # Language     :  PowerShell 4.0
 # Filename     :  Restart-PowerShell.ps1
 # Autor        :  BornToBeRoot (https://github.com/BornToBeRoot)
-# Description  :  Restart the PowerShell-Console, optional with administrative privileges
-# Repository   :  https://github.com/BornToBeRoot/PowerShell
+# Description  :  Restart the current PowerShell-Console
+# Repository   :  https://github.com/BornToBeRoot/PowerShell_ModernConsole
 ###############################################################################################################
+
+<#
+    .SYNOPSIS
+    Restart the current PowerShell-Console
+    
+    .DESCRIPTION
+    Restart the current PowerShell-Console, optional with administrative privileges
+
+    .EXAMPLE
+    Restart-PowerShell
+
+    .EXAMPLE
+    Restart-PowerShell -AsAdmin
+    
+    .LINK
+    https://github.com/BornToBeRoot/PowerShell_ModernConsole
+#>
 
 function Restart-PowerShell
 {
