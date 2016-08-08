@@ -131,16 +131,16 @@ function prompt {
 	Write-Host "[" -NoNewline -ForegroundColor Gray
     Write-Host "$RootPath" -NoNewline -ForegroundColor Green
     Write-Host "] " -NoNewline -ForegroundColor Gray
-    Write-Host "$Folder" -NoNewline -ForegroundColor Yellow
+    Write-Host "$Folder " -NoNewline -ForegroundColor Yellow
 	
 	if($IsAdmin)
 	{
-		Write-Host " (" -NoNewline -ForegroundColor Gray
+		Write-Host "(" -NoNewline -ForegroundColor Gray
 		Write-Host "Admin" -NoNewline -ForegroundColor Red
-		Write-Host ")" -NoNewline -ForegroundColor Gray
+		Write-Host ") " -NoNewline -ForegroundColor Gray
 	}
 
-    Write-Host " ~#" -NoNewline -ForegroundColor Gray
+    Write-Host "~#" -NoNewline -ForegroundColor Gray
 	return " "
 }
 
