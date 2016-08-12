@@ -68,7 +68,7 @@ function Start-PowerShell
             }
         }
         catch{
-            Write-Host "$($_.Exception.Message)" -ForegroundColor Red
+            throw
         }
     }
 

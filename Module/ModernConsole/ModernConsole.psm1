@@ -80,7 +80,7 @@ function Write-StartScreen {
 
 "@
 
-	Write-Host $EmptyConsoleText
+	Write-Host -Object $EmptyConsoleText
 }
 
 # Overwrite default function "Clear-Host"
@@ -128,19 +128,19 @@ function prompt {
     }
     
 	
-	Write-Host "[" -NoNewline -ForegroundColor Gray
-    Write-Host "$RootPath" -NoNewline -ForegroundColor Green
-    Write-Host "] " -NoNewline -ForegroundColor Gray
-    Write-Host "$Folder " -NoNewline -ForegroundColor Yellow
+	Write-Host -Object "[" -NoNewline -ForegroundColor Gray
+    Write-Host -Object "$RootPath" -NoNewline -ForegroundColor Green
+    Write-Host -Object "] " -NoNewline -ForegroundColor Gray
+    Write-Host -Object "$Folder " -NoNewline -ForegroundColor Yellow
 	
 	if($IsAdmin)
 	{
-		Write-Host "(" -NoNewline -ForegroundColor Gray
-		Write-Host "Admin" -NoNewline -ForegroundColor Red
-		Write-Host ") " -NoNewline -ForegroundColor Gray
+		Write-Host -Object "(" -NoNewline -ForegroundColor Gray
+		Write-Host -Object "Admin" -NoNewline -ForegroundColor Red
+		Write-Host -Object ") " -NoNewline -ForegroundColor Gray
 	}
 
-    Write-Host "~#" -NoNewline -ForegroundColor Gray
+    Write-Host -Object "~#" -NoNewline -ForegroundColor Gray
 	return " "
 }
 

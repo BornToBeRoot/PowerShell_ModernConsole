@@ -54,11 +54,11 @@ function Restart-PowerShell
             }
             else 
             {
-                Write-Host "Current process is not a console host and will not be closed by this function." -ForegroundColor Yellow    
+                Write-Warning -Message "Current process is not a console host and will not be closed by this function."    
             }
         }
         catch{
-            Write-Host "$($_.Exception.Message)" -ForegroundColor Red
+            throw
         }
     }
 
