@@ -20,7 +20,7 @@
     Start-PowerShell -AsAdmin
 
     .EXAMPLE
-    Start-PowerShell -Credential (Get-Credential $null)        
+    Start-PowerShell -Credential (Get-Credential)        
     
     .LINK
     https://github.com/BornToBeRoot/PowerShell_ModernConsole
