@@ -41,7 +41,7 @@ function Start-PowerShell
             ParameterSetName='Credential',
             Position=0,
             Mandatory=$true,
-            HelpMessage='PSCredential')]
+            HelpMessage='PSCredential to authenticate agains a remote computer')]
         [System.Management.Automation.PSCredential]$Credential
     )
 
