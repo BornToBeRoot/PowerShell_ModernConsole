@@ -27,10 +27,3 @@ Set the font and size as shown on the screenshot:
 | :--- | :--- |
 | Start screen | Informations about the user and the system (overwrites `Clear-Console`) |
 | Short path | Drive/network share and current folder (overwrites `prompt`) |
-
-#### Available functions
-
-| Function | Description |
-| :--- | :--- |
-| [Restart-PowerShell](Module/ModernConsole/Functions/Restart-PowerShell.ps1) | Restart the PowerShell-Console, optional with administrative privileges |
-| [Start-PowerShell](Module/ModernConsole/Functions/Start-PowerShell.ps1) |  Start a new PowerShell-Console, optional with administrative privileges or as another user | 

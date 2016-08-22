@@ -6,12 +6,6 @@
 # Repository   :  https://github.com/BornToBeRoot/PowerShell_ModernConsole
 ###############################################################################################################
 
-# Include functions which are outsourced in .ps1-files
-Get-ChildItem -Path "$PSScriptRoot\Functions" -Recurse | Where-Object -FilterScript {$_.Name.EndsWith(".ps1")} | ForEach-Object -Process {. $_.FullName}
-
-# Set alias for custom functions 
-Set-Alias -Name restart -Value Restart-PowerShell
-
 # Check if console was started as admin
 if(([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator"))
 {
