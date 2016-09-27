@@ -21,7 +21,7 @@ Set the font and size as shown on the screenshot:
 3. Open up a PowerShell as an admin and set the execution policy: `Set-ExecutionPolicy RemoteSigned`
 4. Import the Module with the command `Import-Module ModernConsole` (Maybe add this command to your PowerShell profile)
 
-#### Available features
+#### Available features:
 
 | Feature | Description |
 | :--- | :--- |
