@@ -62,7 +62,7 @@ function Write-StartScreen {
      SSSSS                                  | |_) / _ \ \ /\ / / _ \ '__\___ \| '_ \ / _ \ | |    
      SSSSSSSS                               |  __/ (_) \ V  V /  __/ |   ___) | | | |  __/ | |    
      SSSSSSSSSSS                            |_|   \___/ \_/\_/ \___|_|  |____/|_| |_|\___|_|_|    
-         SSSSSSSSSSS                                                                             
+        SSSSSSSSSSS                                                                             
            SSSSSSSSSSS              +=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=+
               SSSSSSSSSSS           |
                SSSSSSSSSS           |   Domain\Username  :  $env:USERDOMAIN\$env:USERNAME     
