@@ -1,4 +1,4 @@
-# PowerShell - ModernConsole
+# PowerShell moduel | ModernConsole
 
 Module to improve your user experience with PowerShell.
 
